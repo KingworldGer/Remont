@@ -3,291 +3,199 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Ремонт садовой техники в Коврове</title>
-<meta name="description" content="Ремонт бензопил, мотокос, триммеров, газонокосилок, мотоблоков и генераторов в Коврове. Быстро. С гарантией.">
+<title>Ремонт садовой техники — Ковров</title>
+<meta name="description" content="Ремонт бензопил, мотокос, триммеров, газонокосилок, мотоблоков и генераторов в Коврове. Заточка цепей. Гарантия до 6 месяцев.">
 
 <style>
-:root{
-  --accent:#3aa6ff;
-  --accent2:#00e0b8;
-  --dark:#050b18;
-}
-
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{
   font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
   color:#fff;
-  background:#000;
 }
 
-/* ===== BACKGROUND ===== */
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
+body{
   background:
-    linear-gradient(to bottom, rgba(5,10,20,.35), rgba(5,10,20,.85)),
-    url("background.jpeg") center/cover no-repeat;
-  z-index:-1;
+    linear-gradient(rgba(0,0,0,.35),rgba(0,0,0,.7)),
+    url("background.jpeg") center/cover fixed no-repeat;
+  min-height:100vh;
 }
 
-/* ===== LAYOUT ===== */
-.wrap{
-  max-width:1200px;
+.container{
+  max-width:1100px;
   margin:auto;
   padding:16px 16px 120px;
 }
 
 /* ===== HEADER ===== */
-.header{
+header{
   display:flex;
-  align-items:center;
   justify-content:space-between;
-  gap:16px;
-  padding:14px 18px;
-  border-radius:22px;
-  background:rgba(10,18,35,.55);
-  backdrop-filter:blur(10px);
+  align-items:center;
+  gap:12px;
+  padding:14px 16px;
+  background:rgba(0,0,0,.55);
+  border-radius:16px;
 }
 
-.brand{
-  display:flex;
-  align-items:center;
-  gap:14px;
+.title{
+  line-height:1.25;
 }
-.logo{
-  width:54px;
-  height:54px;
-  border-radius:16px;
-  background:linear-gradient(135deg,var(--accent),var(--accent2));
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-weight:900;
-  font-size:20px;
-  color:#04101f;
-}
-.brand-text{
-  line-height:1.2;
-}
-.brand-text strong{
+.title strong{
   font-size:18px;
   display:block;
 }
-.brand-text span{
+.title span{
   font-size:13px;
   opacity:.85;
 }
 
-.header-right{
+.contact{
   text-align:right;
 }
-.phone{
-  font-size:22px;
-  font-weight:900;
-  white-space:nowrap;
-}
-.phone a{
+.contact a{
+  font-size:20px;
+  font-weight:800;
   color:#fff;
   text-decoration:none;
+  white-space:nowrap;
 }
-.address{
-  font-size:13px;
+.contact div{
+  font-size:12px;
   opacity:.8;
 }
 
 /* ===== HERO ===== */
 .hero{
-  margin-top:24px;
-  padding:32px 26px;
-  border-radius:28px;
-  background:rgba(12,20,40,.55);
-  backdrop-filter:blur(10px);
+  margin-top:20px;
+  padding:22px;
+  background:rgba(0,0,0,.55);
+  border-radius:18px;
 }
 
 .hero h1{
-  font-size:34px;
+  font-size:26px;
   font-weight:900;
-  line-height:1.15;
-  margin-bottom:14px;
+  margin-bottom:10px;
 }
 .hero p{
-  font-size:17px;
-  max-width:720px;
+  font-size:15px;
+  line-height:1.5;
   opacity:.95;
 }
 
-.hero-actions{
-  margin-top:20px;
+.hero-tags{
+  margin-top:14px;
   display:flex;
   flex-wrap:wrap;
-  gap:14px;
+  gap:8px;
 }
-.btn{
-  padding:14px 22px;
+.tag{
+  font-size:13px;
+  padding:6px 12px;
   border-radius:999px;
-  font-size:16px;
-  font-weight:900;
-  text-decoration:none;
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  box-shadow:0 12px 30px rgba(0,0,0,.4);
-}
-.btn-call{
-  background:var(--accent);
-  color:#04101f;
-}
-.btn-tg{
-  background:#26a5e4;
-  color:#fff;
-}
-
-/* ===== FEATURES ===== */
-.features{
-  margin-top:28px;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:14px;
-}
-.feature{
-  padding:18px;
-  border-radius:20px;
-  background:rgba(15,25,50,.6);
-  backdrop-filter:blur(8px);
-}
-.feature strong{
-  display:block;
-  font-size:16px;
-  margin-bottom:6px;
-}
-.feature span{
-  font-size:14px;
-  opacity:.9;
+  background:rgba(255,255,255,.12);
 }
 
 /* ===== SERVICES ===== */
-.section{
-  margin-top:36px;
-}
-.section h2{
-  font-size:26px;
+h2{
+  margin:24px 0 12px;
+  font-size:22px;
   font-weight:900;
-  margin-bottom:16px;
 }
 
 .services{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-  gap:16px;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:12px;
 }
 .service{
-  border-radius:22px;
+  background:rgba(0,0,0,.55);
+  border-radius:14px;
   overflow:hidden;
-  background:rgba(15,25,50,.6);
 }
 .service img{
   width:100%;
-  height:170px;
+  height:140px;
   object-fit:cover;
 }
 .service div{
-  padding:16px;
+  padding:12px;
 }
 .service h3{
-  font-size:18px;
-  margin-bottom:6px;
+  font-size:16px;
+  margin-bottom:4px;
 }
 .service p{
   font-size:14px;
   opacity:.9;
 }
 
-/* ===== FLOATING CTA ===== */
+/* ===== FLOATING BUTTONS ===== */
 .fab{
   position:fixed;
-  bottom:18px;
-  right:18px;
+  right:16px;
+  bottom:16px;
   display:flex;
   flex-direction:column;
-  gap:12px;
-  z-index:999;
+  gap:10px;
 }
 .fab a{
-  padding:14px 22px;
+  padding:14px 18px;
   border-radius:999px;
   font-size:16px;
-  font-weight:900;
+  font-weight:800;
   text-decoration:none;
-  box-shadow:0 10px 30px rgba(0,0,0,.45);
-  white-space:nowrap;
+  color:#000;
 }
-.fab-call{background:var(--accent);color:#04101f}
-.fab-tg{background:#26a5e4;color:#fff}
-
-@media(max-width:640px){
-  .hero h1{font-size:28px}
-  .phone{font-size:20px}
-}
+.call{background:#4da3ff}
+.tg{background:#2aa7e0;color:#fff}
 </style>
 </head>
 
 <body>
 
-<div class="wrap">
+<div class="container">
 
-  <header class="header">
-    <div class="brand">
-      <div class="logo">KP</div>
-      <div class="brand-text">
-        <strong>Ремонт техники</strong>
-        <span>Садово-парковая · Ковров</span>
-      </div>
-    </div>
-    <div class="header-right">
-      <div class="phone">
-        <a href="tel:+79190170331">+7&nbsp;(919)&nbsp;017-03-31</a>
-      </div>
-      <div class="address">1-я Всегодическая, д. 12</div>
-    </div>
-  </header>
-
-  <section class="hero">
-    <h1>Ремонт садовой техники<br>без лишней волокиты</h1>
-    <p>
-      Бензопилы, мотокосы, триммеры, газонокосилки, мотоблоки, генераторы.
-      Диагностика, запчасти, выездной сервис и гарантия до 6 месяцев.
-    </p>
-    <div class="hero-actions">
-      <a class="btn btn-call" href="tel:+79190170331">📞 Позвонить</a>
-      <a class="btn btn-tg" href="https://t.me/+79190170331">✉️ Написать в Telegram</a>
-    </div>
-  </section>
-
-  <div class="features">
-    <div class="feature"><strong>Заточка цепей</strong><span>Около 15 минут</span></div>
-    <div class="feature"><strong>Диагностика</strong><span>Консультация и смета</span></div>
-    <div class="feature"><strong>Запчасти</strong><span>Оригинал и аналоги</span></div>
-    <div class="feature"><strong>Выезд</strong><span>По договорённости</span></div>
+<header>
+  <div class="title">
+    <strong>Ремонт садовой техники</strong>
+    <span>Ковров · Сервис и обслуживание</span>
   </div>
+  <div class="contact">
+    <a href="tel:+79190170331">+7&nbsp;(919)&nbsp;017-03-31</a>
+    <div>1-я Всегодическая, д. 12</div>
+  </div>
+</header>
 
-  <section class="section">
-    <h2>Что ремонтируем</h2>
-    <div class="services">
-      <div class="service"><img src="1.jpg"><div><h3>Бензопилы</h3><p>Цепи, карбюраторы, зажигание</p></div></div>
-      <div class="service"><img src="2.jpg"><div><h3>Мотокосы и триммеры</h3><p>Ремонт и обслуживание</p></div></div>
-      <div class="service"><img src="3.jpg"><div><h3>Газонокосилки</h3><p>Ножи, ремни, ТО</p></div></div>
-      <div class="service"><img src="4.jpg"><div><h3>Мотоблоки и генераторы</h3><p>Трансмиссия и электрика</p></div></div>
-    </div>
-  </section>
+<section class="hero">
+  <h1>Ремонт без лишней болтовни</h1>
+  <p>
+    Бензопилы, мотокосы, триммеры, газонокосилки, мотоблоки,
+    культиваторы, виброплиты, мотопомпы и генераторы.
+  </p>
+  <div class="hero-tags">
+    <div class="tag">Заточка цепей ~15 минут</div>
+    <div class="tag">Диагностика + смета</div>
+    <div class="tag">Запчасти</div>
+    <div class="tag">Выезд по договорённости</div>
+    <div class="tag">Гарантия до 6 месяцев</div>
+  </div>
+</section>
+
+<h2>Что ремонтируем</h2>
+<div class="services">
+  <div class="service"><img src="1.jpg"><div><h3>Бензопилы</h3><p>Цепи, карбюратор, зажигание</p></div></div>
+  <div class="service"><img src="2.jpg"><div><h3>Мотокосы и триммеры</h3><p>Ремонт и обслуживание</p></div></div>
+  <div class="service"><img src="3.jpg"><div><h3>Газонокосилки</h3><p>Ножи, ремни, ТО</p></div></div>
+  <div class="service"><img src="4.jpg"><div><h3>Мотоблоки и генераторы</h3><p>Трансмиссия и электрика</p></div></div>
+</div>
 
 </div>
 
 <div class="fab">
-  <a class="fab-call" href="tel:+79190170331">📞 Позвонить</a>
-  <a class="fab-tg" href="https://t.me/+79190170331">✉️ Telegram</a>
+  <a class="call" href="tel:+79190170331">📞 Позвонить</a>
+  <a class="tg" href="https://t.me/+79190170331">✉ Telegram</a>
 </div>
 
 </body>
 </html>
-
